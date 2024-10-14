@@ -1,0 +1,105 @@
+/* Button base styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Variants */
+.button-primary {
+  background-color: #3498db;
+  color: white;
+}
+.button-primary:hover {
+  background-color: #2980b9;
+}
+
+.button-destructive {
+  background-color: #e74c3c;
+  color: white;
+}
+.button-destructive:hover {
+  background-color: #c0392b;
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 1px solid #dcdcdc;
+  color: #333;
+}
+.button-outline:hover {
+  background-color: #f0f0f0;
+}
+
+.button-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+.button-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.button-ghost {
+  background-color: transparent;
+  color: #333;
+}
+.button-ghost:hover {
+  background-color: #f0f0f0;
+}
+
+.button-link {
+  background-color: transparent;
+  color: #3498db;
+  text-decoration: underline;
+}
+.button-link:hover {
+  color: #2980b9;
+}
+
+/* Sizes */
+.button-sm {
+  height: 36px;
+  padding: 0.25rem 0.75rem;
+}
+
+.button-lg {
+  height: 44px;
+  padding: 0.75rem 1.25rem;
+}
+
+.button-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Loader (for loading button) */
+.loader {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-left-color: white;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled */
+.button[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
