@@ -72,6 +72,12 @@ import CounterContext from './components/CounterContext';
 import CounterReducer from './components/CounterReducer';
 import USEFFECTcomp from './components/USEFFECTcomp';
 
+// hooks 
+
+import UseStatedemo from './Hooks-react/USESTATE/demo';
+import UseEffectdemo from './Hooks-react/USEEFFECT/demo';
+import UseMemodemo from './Hooks-react/USEMEMO/demo';
+import UseCallbackDemo from './Hooks-react/USECALLBACK/demo';
 
  interface User{
   name:string;
@@ -96,22 +102,22 @@ const admin: AdminfoList = {
 }
   return (
     <div>
-      <Childrens>
+      {/* <Childrens>
         <h1>Hello world children of God</h1>
       </Childrens>
-      <Users name="nicolas" age={34} isStudent={false} /> {/* renders Users component */}
+      <Users name="nicolas" age={34} isStudent={false} />  
       <h1>user info</h1>
       <UserInfo user={user}/>
       <h1>admin info</h1>
-      <AdminInfo admin={admin}/> {/* renders AdminInfo component */}
+      <AdminInfo admin={admin}/>  
 
-      <Counters /> {/* renders Counters component */}
+      <Counters /> 
 
       <h3>User profile</h3>
-      <UserProfile/> {/* renders UserProfile component */}
+      <UserProfile/>  
 
       <h3>Form</h3>
-      <Form /> {/* renders Form component */}
+      <Form /> 
 
       <h1>another counter with context</h1>
       <CounterContext/>
@@ -120,7 +126,15 @@ const admin: AdminfoList = {
       <CounterReducer/>
 
       <h1>Use effect with types</h1>
-      <USEFFECTcomp/>
+      <USEFFECTcomp/> */}
+
+
+      <h1 className='text-lg'> Hooks</h1>
+      <UseStatedemo/>
+      <UseEffectdemo/>
+      <UseMemodemo/>
+      <UseCallbackDemo/>
+
     </div>
   )
 }
