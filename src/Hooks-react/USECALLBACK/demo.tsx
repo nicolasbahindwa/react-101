@@ -36,7 +36,7 @@ const UseCallbackDemo: FC<DemoProps> = () => {
     <div>
         <h1>UseCallbackDemo</h1>
         <div>
-            <button onClick={() => setUsers(Shuffle([... allUsers]))}>sheffle</button>
+            <button className='bg-gray-200 p-2 m-2' onClick={() => setUsers(Shuffle([... allUsers]))}>sheffle</button>
         </div>
         <Search onChange={handleSearch}/>
         <div>

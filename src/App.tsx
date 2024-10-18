@@ -78,6 +78,8 @@ import UseStatedemo from './Hooks-react/USESTATE/demo';
 import UseEffectdemo from './Hooks-react/USEEFFECT/demo';
 import UseMemodemo from './Hooks-react/USEMEMO/demo';
 import UseCallbackDemo from './Hooks-react/USECALLBACK/demo';
+import UseContextDemo from './Hooks-react/USECONTEXT/demo';
+import UseRefDemo from './Hooks-react/USEREF/demo';
 
  interface User{
   name:string;
@@ -134,6 +136,8 @@ const admin: AdminfoList = {
       <UseEffectdemo/>
       <UseMemodemo/>
       <UseCallbackDemo/>
+      <UseContextDemo/>
+      <UseRefDemo/>
 
     </div>
   )

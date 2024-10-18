@@ -10,7 +10,8 @@ const UseMemodemo = () => {
     // fix with useMemo
     // const selectedItem = useMemo(() => items.find((item) => item.isSelected),[items])
 
-    const selectedItem = useMemo(() => items.find((item) => item.id === counter),[counter, items])
+    const selectedItem = useMemo(
+      () => items.find((item) => item.id === counter),[counter, items])
   return (
     <div className='space-x-5 mt-4'>
         UseMemo hook
