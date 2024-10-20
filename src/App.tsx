@@ -80,6 +80,13 @@ import UseMemodemo from './Hooks-react/USEMEMO/demo';
 import UseCallbackDemo from './Hooks-react/USECALLBACK/demo';
 import UseContextDemo from './Hooks-react/USECONTEXT/demo';
 import UseRefDemo from './Hooks-react/USEREF/demo';
+import UsReducerDemo from './Hooks-react/USEREDUCER/demo'
+import UseImperativeHandle from './Hooks-react/USEIMPERATIVEHANDLE/demo';
+import UseTransition from "./Hooks-react/USETRANSITION/Demo";
+import FilterComponent from './Hooks-react/USEDEFFEREDVALUE/demo'
+import ResizableBox from "./Hooks-react/USELAYOUTEFFECT/demo";
+import Tooltip from './Hooks-react/USELAYOUTEFFECT/demo'
+import DemoTypes from './TypeScripts/DemoTypes';
 
  interface User{
   name:string;
@@ -130,17 +137,23 @@ const admin: AdminfoList = {
       <h1>Use effect with types</h1>
       <USEFFECTcomp/> */}
 
-
-      <h1 className='text-lg'> Hooks</h1>
-      <UseStatedemo/>
-      <UseEffectdemo/>
-      <UseMemodemo/>
-      <UseCallbackDemo/>
-      <UseContextDemo/>
-      <UseRefDemo/>
-
+      <h1 className="text-lg"> Hooks</h1>
+      {/* <UseStatedemo />
+      <UseEffectdemo />
+      <UseMemodemo />
+      <UseCallbackDemo />
+      <UseContextDemo />
+      <UseRefDemo />
+      <UsReducerDemo /> */}
+      {/* <UseImperativeHandle /> */}
+      {/* <UseTransition /> */}
+      {/* <FilterComponent/> */}
+      {/* <Box/> */}
+      <ResizableBox/>
+      <Tooltip/>
+      <DemoTypes/>
     </div>
-  )
+  );
 }
 
 export default App
