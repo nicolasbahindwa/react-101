@@ -87,6 +87,11 @@ import FilterComponent from './Hooks-react/USEDEFFEREDVALUE/demo'
 import ResizableBox from "./Hooks-react/USELAYOUTEFFECT/demo";
 import Tooltip from './Hooks-react/USELAYOUTEFFECT/demo'
 import DemoTypes from './TypeScripts/DemoTypes';
+import MainStatusComp from './TypeScripts/advancedProps/Status.tsx';
+import MainEventProps from './TypeScripts/EventProps/MainEventProps.tsx';
+import Mainstyles from './TypeScripts/stylesProps/Mainstyles.tsx';
+import MainPageContext from './TypeScripts/context/MainPageContext.tsx';
+
 
  interface User{
   name:string;
@@ -149,9 +154,14 @@ const admin: AdminfoList = {
       {/* <UseTransition /> */}
       {/* <FilterComponent/> */}
       {/* <Box/> */}
-      <ResizableBox/>
-      <Tooltip/>
+      {/* <ResizableBox/> */}
+      {/* <Tooltip/> */}
       <DemoTypes/>
+      <MainStatusComp/>
+      <MainEventProps/>
+      <Mainstyles/>
+      <MainPageContext/>
+
     </div>
   );
 }

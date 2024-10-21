@@ -15,6 +15,14 @@ const DemoTypes = () => {
         {
             first:'clark',
             last:'kent',
+        },
+        {
+            first:'thor',
+            last:'odinson',
+        },
+        {
+            first:'hawkeye',
+            last:'jarvis',
         }
     ]
   return (

@@ -1,14 +1,21 @@
 import React from 'react'
+// import {PeopleProps} from './Person.types'
+import {names} from './Person.types'
+import Counter from './state/Counter'
 
-type PeopleProps = {
-     names:{
-        first:string,
-        last:string
-     }
+// type PeopleProps = {
+//      names:{
+//         first:string,
+//         last:string
+//      }
 
+// }
+
+type PersonListProps = {
+  names: names[]
 }
 
-const Peoples = (props:PeopleProps) => {
+const Peoples = (props:PersonListProps) => {
   return (
     <div>
       {props.names.map((name) => {
@@ -19,7 +26,7 @@ const Peoples = (props:PeopleProps) => {
         );
       })}
 
-      
+      <Counter/>
     </div>
   );
 }
