@@ -91,6 +91,15 @@ import MainStatusComp from './TypeScripts/advancedProps/Status.tsx';
 import MainEventProps from './TypeScripts/EventProps/MainEventProps.tsx';
 import Mainstyles from './TypeScripts/stylesProps/Mainstyles.tsx';
 import MainPageContext from './TypeScripts/context/MainPageContext.tsx';
+import { MutableRef } from './TypeScripts/ref/MutableRef.tsx';
+import { Private } from './TypeScripts/auth/Private.tsx';
+import { Profile } from './TypeScripts/auth/Profile.tsx';
+import { List } from './TypeScripts/generics/List.tsx';
+import RandomNumber from './TypeScripts/restriction/RandomNumber.tsx';
+import { Toast } from './TypeScripts/templateliterals/toast.tsx';
+import { CustomButton } from './TypeScripts/html/button.tsx';
+import { Text } from './TypeScripts/polimorphic/Text.tsx';
+
 
 
  interface User{
@@ -114,6 +123,10 @@ const admin: AdminfoList = {
     role:'admin',
     lastLogin: new Date()
 }
+
+const handleClick = () => {
+  console.log("Button clicked!");
+};
   return (
     <div>
       {/* <Childrens>
@@ -161,7 +174,55 @@ const admin: AdminfoList = {
       <MainEventProps/>
       <Mainstyles/>
       <MainPageContext/>
+      <MutableRef/>
+      {/* passing a component as a prop */}
+      <Private isLoggedIn={true} Component={Profile}/>
+      
+      <List 
+        items= {['batman', 'superman', 'wonder woman']}
+        onclick={(item) => console.log(item)}>
+      </List>
 
+      <List 
+        items= {[1, 2,3]}
+        onclick={(item) => console.log(item)}>
+      </List>
+
+      <List 
+        items= {[
+          {
+          first: "nicolas",
+          last: 'bahindwa'
+          },
+          {
+            first: "john",
+            last: 'doe'
+          },
+          {
+            first: "sarah",
+            last: 'connor'
+          }
+        ]}
+        onclick={(item) => console.log(item)}>
+      </List>
+
+      <RandomNumber value={10} isPositive/>
+
+      <h1 className='mt-8 ml-4 font-bold'>Toast with position , props literals</h1>
+      <Toast position='center-bottom'/>
+      
+        <h1 className='mt-8 ml-4 font-bold'>Custom buttons with variants and size</h1>
+
+        <CustomButton className='ml-4 bg-black  text-white p-2' variant='primary' onClick={()=> console.log('we are clicking')}>
+          CLlickable
+        </CustomButton>
+        <h1 className='mt-8 ml-4 font-bold'> Polymorphic props</h1>
+        <Text as='p' size='lg'>Heading</Text>
+        <Text as='h1' size='md'>Paragraph</Text>
+        <Text as='label' htmlFor='someId' size='sm'>Small Text</Text>
+        <Text as='span'  size='sm' color='secondary'>
+          label
+        </Text>
     </div>
   );
 }

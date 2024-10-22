@@ -1,4 +1,4 @@
-import { useContext } from "react"
+// import { useContext } from "react"
 import {useUserContext} from './useUserContext'
 
 
@@ -15,6 +15,10 @@ export const UserPage = () => {
         setUser({
             name: 'John Doe',
             email: 'johndoe@example.com',
+            password: 'password',
+            confirmPassword: 'password',
+            role: 'admin',
+            isAdmin: true
         })
         
     }
