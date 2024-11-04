@@ -99,6 +99,8 @@ import RandomNumber from './TypeScripts/restriction/RandomNumber.tsx';
 import { Toast } from './TypeScripts/templateliterals/toast.tsx';
 import { CustomButton } from './TypeScripts/html/button.tsx';
 import { Text } from './TypeScripts/polimorphic/Text.tsx';
+import {store} from './app/store'
+import {Provider} from 'react-redux'
 
 
 
@@ -128,102 +130,115 @@ const handleClick = () => {
   console.log("Button clicked!");
 };
   return (
-    <div>
-      {/* <Childrens>
-        <h1>Hello world children of God</h1>
-      </Childrens>
-      <Users name="nicolas" age={34} isStudent={false} />  
-      <h1>user info</h1>
-      <UserInfo user={user}/>
-      <h1>admin info</h1>
-      <AdminInfo admin={admin}/>  
+    <Provider store={store}>
+        <div>
+          {/* <Childrens>
+          <h1>Hello world children of God</h1>
+        </Childrens>
+        <Users name="nicolas" age={34} isStudent={false} />  
+        <h1>user info</h1>
+        <UserInfo user={user}/>
+        <h1>admin info</h1>
+        <AdminInfo admin={admin}/>  
 
-      <Counters /> 
+        <Counters /> 
 
-      <h3>User profile</h3>
-      <UserProfile/>  
+        <h3>User profile</h3>
+        <UserProfile/>  
 
-      <h3>Form</h3>
-      <Form /> 
+        <h3>Form</h3>
+        <Form /> 
 
-      <h1>another counter with context</h1>
-      <CounterContext/>
+        <h1>another counter with context</h1>
+        <CounterContext/>
 
-      <h1>Counter with reducer</h1>
-      <CounterReducer/>
+        <h1>Counter with reducer</h1>
+        <CounterReducer/>
 
-      <h1>Use effect with types</h1>
-      <USEFFECTcomp/> */}
+        <h1>Use effect with types</h1>
+        <USEFFECTcomp/> */}
 
-      <h1 className="text-lg"> Hooks</h1>
-      {/* <UseStatedemo />
-      <UseEffectdemo />
-      <UseMemodemo />
-      <UseCallbackDemo />
-      <UseContextDemo />
-      <UseRefDemo />
-      <UsReducerDemo /> */}
-      {/* <UseImperativeHandle /> */}
-      {/* <UseTransition /> */}
-      {/* <FilterComponent/> */}
-      {/* <Box/> */}
-      {/* <ResizableBox/> */}
-      {/* <Tooltip/> */}
-      <DemoTypes/>
-      <MainStatusComp/>
-      <MainEventProps/>
-      <Mainstyles/>
-      <MainPageContext/>
-      <MutableRef/>
-      {/* passing a component as a prop */}
-      <Private isLoggedIn={true} Component={Profile}/>
-      
-      <List 
-        items= {['batman', 'superman', 'wonder woman']}
-        onclick={(item) => console.log(item)}>
-      </List>
+          <h1 className="text-lg"> Hooks</h1>
+          {/* <UseStatedemo />
+        <UseEffectdemo />
+        <UseMemodemo />
+        <UseCallbackDemo />
+        <UseContextDemo />
+        <UseRefDemo />
+        <UsReducerDemo /> */}
+          {/* <UseImperativeHandle /> */}
+          {/* <UseTransition /> */}
+          {/* <FilterComponent/> */}
+          {/* <Box/> */}
+          {/* <ResizableBox/> */}
+          {/* <Tooltip/> */}
+          <DemoTypes />
+          <MainStatusComp />
+          <MainEventProps />
+          <Mainstyles />
+          <MainPageContext />
+          <MutableRef />
+          {/* passing a component as a prop */}
+          <Private isLoggedIn={true} Component={Profile} />
 
-      <List 
-        items= {[1, 2,3]}
-        onclick={(item) => console.log(item)}>
-      </List>
+          <List
+            items={["batman", "superman", "wonder woman"]}
+            onclick={(item) => console.log(item)}
+          ></List>
 
-      <List 
-        items= {[
-          {
-          first: "nicolas",
-          last: 'bahindwa'
-          },
-          {
-            first: "john",
-            last: 'doe'
-          },
-          {
-            first: "sarah",
-            last: 'connor'
-          }
-        ]}
-        onclick={(item) => console.log(item)}>
-      </List>
+          <List items={[1, 2, 3]} onclick={(item) => console.log(item)}></List>
 
-      <RandomNumber value={10} isPositive/>
+          <List
+            items={[
+              {
+                first: "nicolas",
+                last: "bahindwa",
+              },
+              {
+                first: "john",
+                last: "doe",
+              },
+              {
+                first: "sarah",
+                last: "connor",
+              },
+            ]}
+            onclick={(item) => console.log(item)}
+          ></List>
 
-      <h1 className='mt-8 ml-4 font-bold'>Toast with position , props literals</h1>
-      <Toast position='center-bottom'/>
-      
-        <h1 className='mt-8 ml-4 font-bold'>Custom buttons with variants and size</h1>
+          <RandomNumber value={10} isPositive />
 
-        <CustomButton className='ml-4 bg-black  text-white p-2' variant='primary' onClick={()=> console.log('we are clicking')}>
-          CLlickable
-        </CustomButton>
-        <h1 className='mt-8 ml-4 font-bold'> Polymorphic props</h1>
-        <Text as='p' size='lg'>Heading</Text>
-        <Text as='h1' size='md'>Paragraph</Text>
-        <Text as='label' htmlFor='someId' size='sm'>Small Text</Text>
-        <Text as='span'  size='sm' color='secondary'>
-          label
-        </Text>
-    </div>
+          <h1 className="mt-8 ml-4 font-bold">
+            Toast with position , props literals
+          </h1>
+          <Toast position="center-bottom" />
+
+          <h1 className="mt-8 ml-4 font-bold">
+            Custom buttons with variants and size
+          </h1>
+
+          <CustomButton
+            className="ml-4 bg-black  text-white p-2"
+            variant="primary"
+            onClick={() => console.log("we are clicking")}
+          >
+            CLlickable
+          </CustomButton>
+          <h1 className="mt-8 ml-4 font-bold"> Polymorphic props</h1>
+          <Text as="p" size="lg">
+            Heading
+          </Text>
+          <Text as="h1" size="md">
+            Paragraph
+          </Text>
+          <Text as="label" htmlFor="someId" size="sm">
+            Small Text
+          </Text>
+          <Text as="span" size="sm" color="secondary">
+            label
+          </Text>
+        </div>
+    </Provider>
   );
 }
 
