@@ -100,9 +100,11 @@ import { Toast } from './TypeScripts/templateliterals/toast.tsx';
 import { CustomButton } from './TypeScripts/html/button.tsx';
 import { Text } from './TypeScripts/polimorphic/Text.tsx';
 import {store} from './app/store'
-import {Provider} from 'react-redux'
-
-
+import { Provider } from 'react-redux';
+import Counter from './redComponents/Counter.tsx'
+import Allproducts from './redComponents/Allproducts.tsx';
+import SingleProduct from './redComponents/SingleProduct.tsx';
+import AddNewProduct from './redComponents/AddNewProduct.tsx';
 
  interface User{
   name:string;
@@ -237,7 +239,14 @@ const handleClick = () => {
           <Text as="span" size="sm" color="secondary">
             label
           </Text>
+
+          <Counter/>
+          <Allproducts/>
+          <SingleProduct/>
+          <AddNewProduct/>
         </div>
+
+        
     </Provider>
   );
 }
